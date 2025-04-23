@@ -1,85 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ClickNeko</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
     body {
-      background: #ffeef4;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #ffe6f0;
       color: #333;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      padding: 2em;
     }
-    h1 {
-      color: #ff4f9b;
-      font-size: 2.8em;
-      margin-top: 0.5em;
-    }
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .logo {
-      width: 130px;
-      height: 130px;
-      object-fit: contain;
-      border-radius: 20px;
-      background-color: white;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      padding: 10px;
-      transition: transform 0.3s ease;
-    }
-    .logo:hover {
-      transform: scale(1.05);
-    }
-    .download-btn {
-      display: inline-block;
-      margin-top: 2em;
-      padding: 1em 2em;
-      font-size: 1.2em;
-      background-color: #ff4f9b;
+    .button {
+      background-color: #ff66b2;
       color: white;
+      padding: 10px 20px;
       text-decoration: none;
       border-radius: 10px;
-      transition: 0.3s;
-    }
-    .download-btn:hover {
-      background-color: #ff79b3;
+      display: inline-block;
+      margin-top: 10px;
     }
     .section {
-      max-width: 700px;
-      margin: 3em auto;
-      background: white;
-      padding: 2em;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      padding: 40px 20px;
     }
-    footer {
-      margin-top: 4em;
-      color: #777;
-      font-size: 0.9em;
+    .gallery img {
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      margin: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="logo-container">
-    <img src="clickneko_logo.png" alt="ClickNeko Logo" class="logo" />
+  <!-- Logo Section -->
+  <div style="text-align: center; padding-top: 30px;">
+    <img src="clickneko_logo.png" alt="ClickNeko Logo" style="width: 120px; height: auto; border-radius: 100%; box-shadow: 0 0 15px #ff99c8;">
+    <h1 style="color: #ff3399;">ClickNeko</h1>
+    <p>Safe. Simple. Pink. A macro clicker you can trust.</p>
+    <a href="https://github.com/StallasCandy/ClickNeko/releases/latest" class="button">Download ClickNeko v1.0</a>
   </div>
-  <h1>ClickNeko</h1>
-  <p>Safe. Simple. Pink. A macro clicker you can trust.</p>
-
-  <a href="https://github.com/StallasCandy/ClickNeko/releases" class="download-btn">Download ClickNeko v1.0</a>
 
   <div class="section">
     <h2>What is ClickNeko?</h2>
     <p>ClickNeko is a clean, pastel-themed macro clicker built for gamers, learners, and creators.
-       No bloat, no spyware — just cute, clean automation with open code you can learn from.</p>
-    <ul style="text-align: left; display: inline-block; margin-top: 1em;">
+      No bloat, no spyware — just cute, clean automation with open code you can learn from.</p>
+    <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
       <li>Toggle and hold-to-click modes</li>
       <li>Click patterns and delays</li>
       <li>Optional sound effects</li>
@@ -90,16 +58,25 @@
   <div class="section">
     <h2>Why It Matters</h2>
     <p>Most macro tools online are shady. ClickNeko is built around ethical coding and transparency.
-       The full source code is available on GitHub — learn how it works and stay safe online.</p>
+      The full source code is available on GitHub — learn how it works and stay safe online.</p>
   </div>
 
   <div class="section">
     <h2>Explore the Code</h2>
-    <p><a href="https://github.com/StallasCandy/ClickNeko">View ClickNeko on GitHub</a></p>
+    <p><a href="https://github.com/StallasCandy/ClickNeko" target="_blank">View ClickNeko on GitHub</a></p>
   </div>
 
-  <footer>
-    Made with ❤️ by Stallas — for safety, education, and cute clickers everywhere.<br />
+  <div class="section">
+    <h2>How It Looks</h2>
+    <div class="gallery">
+      <img src="VImage1.PNG" alt="Macro Settings UI">
+      <img src="VImage2.PNG" alt="Full Interface View">
+      <img src="Vimage3.PNG" alt="Code Snippet Preview">
+    </div>
+  </div>
+
+  <footer style="padding: 30px; font-size: 0.9rem; color: #777;">
+    Made with ❤️ by Stallas — for safety, education, and cute clickers everywhere.<br>
     Licensed under the MIT License.
   </footer>
 </body>
