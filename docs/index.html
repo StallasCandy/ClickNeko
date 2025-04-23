@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ClickNeko</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="Favicon.png">
   <style>
     body {
       font-family: 'Comic Sans MS', cursive;
@@ -29,15 +29,28 @@
     .gallery img {
       width: 250px;
       border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       margin: 10px;
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .logo-container {
+      margin-top: 30px;
+    }
+    .logo-img {
+      width: 140px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ffc1e0;
     }
   </style>
 </head>
 <body>
   <!-- Logo Section -->
-  <div style="text-align: center; padding-top: 30px;">
-    <img src="clickneko_logo.png" alt="ClickNeko Logo" style="width: 120px; height: auto; border-radius: 100%; box-shadow: 0 0 15px #ff99c8;">
+  <div class="logo-container">
+    <img src="clickneko_logo.png" alt="ClickNeko Logo" class="logo-img">
     <h1 style="color: #ff3399;">ClickNeko</h1>
     <p>Safe. Simple. Pink. A macro clicker you can trust.</p>
     <a href="https://github.com/StallasCandy/ClickNeko/releases/latest" class="button">Download ClickNeko v1.0</a>
