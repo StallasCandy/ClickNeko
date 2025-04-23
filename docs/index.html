@@ -6,10 +6,17 @@
   <title>ClickNeko</title>
   <link rel="icon" type="image/png" href="Favicon.png">
   <style>
+    :root {
+      --font-family: 'Comic Sans MS', cursive;
+      --font-size: 16px;
+      --bg-color: #ffe6f0;
+      --text-color: #333;
+    }
     body {
-      font-family: 'Comic Sans MS', cursive;
-      background-color: #ffe6f0;
-      color: #333;
+      font-family: var(--font-family);
+      font-size: var(--font-size);
+      background-color: var(--bg-color);
+      color: var(--text-color);
       margin: 0;
       padding: 0;
       text-align: center;
@@ -52,6 +59,25 @@
       height: auto;
       border-radius: 20px;
       box-shadow: 0 0 20px #ffc1e0;
+    }
+    .accessibility-menu {
+      background: #fff;
+      border-top: 1px solid #ccc;
+      padding: 15px;
+      font-size: 14px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      z-index: 1000;
+    }
+    select, button {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
@@ -107,9 +133,66 @@
     </ul>
   </div>
 
-  <footer style="padding: 30px; font-size: 0.9rem; color: #777;">
+  <footer style="padding: 60px 30px 130px; font-size: 0.9rem; color: #777;">
     Made with ❤️ by Stallas — for safety, education, and cute clickers everywhere.<br>
     Licensed under the MIT License.
   </footer>
+
+  <!-- Accessibility Controls -->
+  <div class="accessibility-menu">
+    <label for="fontSelect">Font Style:</label>
+    <select id="fontSelect">
+      <option value="'Comic Sans MS', cursive">Comic Sans (Default)</option>
+      <option value="Arial, sans-serif">Arial</option>
+      <option value="Verdana, sans-serif">Verdana</option>
+      <option value="Tahoma, sans-serif">Tahoma</option>
+      <option value="Georgia, serif">Georgia</option>
+    </select>
+
+    <label for="fontSize">Font Size:</label>
+    <select id="fontSize">
+      <option value="14px">Small</option>
+      <option value="16px" selected>Medium</option>
+      <option value="18px">Large</option>
+      <option value="20px">Extra Large</option>
+    </select>
+
+    <label for="contrastToggle">High Contrast:</label>
+    <button id="contrastToggle">Toggle</button>
+
+    <label for="languageSelect">Language:</label>
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="zh">中文</option>
+    </select>
+  </div>
+
+  <script>
+    const fontSelect = document.getElementById('fontSelect');
+    const fontSize = document.getElementById('fontSize');
+    const contrastToggle = document.getElementById('contrastToggle');
+    const languageSelect = document.getElementById('languageSelect');
+
+    fontSelect.addEventListener('change', () => {
+      document.documentElement.style.setProperty('--font-family', fontSelect.value);
+    });
+
+    fontSize.addEventListener('change', () => {
+      document.documentElement.style.setProperty('--font-size', fontSize.value);
+    });
+
+    contrastToggle.addEventListener('click', () => {
+      const isHighContrast = getComputedStyle(document.body).getPropertyValue('--bg-color') === 'black';
+      document.documentElement.style.setProperty('--bg-color', isHighContrast ? '#ffe6f0' : 'black');
+      document.documentElement.style.setProperty('--text-color', isHighContrast ? '#333' : 'white');
+    });
+
+    languageSelect.addEventListener('change', () => {
+      alert("Note: Translations are coming soon. This is currently a placeholder.");
+    });
+  </script>
 </body>
 </html>
