@@ -1,4 +1,7 @@
 # ClickNeko
+<p align="center">
+  <img src="clickneko_logo.png" alt="ClickNeko Logo" width="400"/>
+</p>
 
 ClickNeko is a safe, pastel-themed macro clicker created for gamers, learners, and anyone looking for a simple, open-source automation tool.  
 Built with clean Python code, it offers customizable settings and an easy-to-use interface.
